@@ -1,0 +1,175 @@
+/* ------------------------Gloabl Varaibles------------------------------- */
+:root{
+    --header-gradient: linear-gradient(45deg, rgb(92, 139, 207), rgb(17, 17, 63));
+    --section-gradient: linear-gradient(45deg,  rgb(17, 17, 63), rgb(92, 139, 207));
+}
+/* ------------------------Body---------------------------------------- */
+body{
+    padding: 0px;
+    margin: 80px 80px 0px 80px;
+    background-color: whitesmoke;
+}
+/* --------------------Header---------------------------------- */
+header{
+    display: flex;
+    height: 80px;
+    margin: px;
+    position:sticky;
+    top:0px;
+    background-image: var(--header-gradient);
+    justify-content: center;
+    z-index: 1;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    color: aqua;
+}
+nav>span{
+    width: 80px;
+    padding: 5px;
+}
+a{
+    color: black;
+}
+/* ----------------------Main Body--------------------------------- */
+.main1, .main2, .main3, .main4, .main5{
+    height: 100vh;
+}
+.main1{
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    align-content: center;
+}
+.main1>div{
+    background-image: var(--header-gradient);
+    width: 250px;
+    height: 300px;
+    border-radius: 30px;
+    margin: 20px;
+    box-shadow: -3px 3px 5px rgb(90, 84, 84), 3px -3px 5px rgb(56, 50, 50);
+    transition: transform 1s;
+}
+.main1>div:hover{
+    transform: scale(1.2);
+}
+.div1{
+    grid-column-start: 2;
+    flex-direction: row;
+    overflow: hidden;
+}
+.div1>div{
+    height: 150px;
+    overflow: hidden;
+}
+.div2{
+    overflow: hidden;
+}
+.div2>div{
+    height: 150px;
+    overflow: hidden;
+}
+
+.card-section2{
+    margin:0px 0px 10px 0px;
+}
+.card-section2>h2{
+    margin: 2px 0px 4px 10px;
+}
+.card-section2>section{
+    margin: 0px 0px 20px 0px;
+    padding: 5px;
+    border-radius: 0px;
+    background-image: var(--section-gradient);
+    overflow: hidden;
+}
+button{
+    height: 30px;
+    width: 100%;
+    background-image: var(--section-gradient);
+    border: transparent;
+    border-radius: 10px;
+    box-shadow: -4px 4px 5px gray, 4px 0px 5px gray;
+    
+}
+.main2{
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.main2>div{
+    width: 40vw;
+    height: 80vh;
+    overflow: hidden;
+    filter: drop-shadow(-5px 5px 5px rgb(89, 84, 84)) drop-shadow(5px -5px 5px rgb(74, 69, 69));
+}
+.main3{
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.main3>div{
+    width: 40vw;
+    height: 80vh;
+    overflow: hidden;
+    filter: drop-shadow(-5px 5px 5px rgb(89, 84, 84)) drop-shadow(5px -5px 5px rgb(74, 69, 69));
+}
+.div3{
+    overflow: hidden;
+}
+.div3>div{
+    height: 150px;
+    overflow: hidden;
+}
+.main4{
+    background-image: var(--header-gradient);
+}
+.main4>div{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px;
+}
+.main4>blockquote{
+    margin: 10px;
+}
+h1{
+    padding: 70px;
+}
+.main4-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+    margin-top: 50px;
+}
+.main4-section>span{
+    color: black;
+    font-size: 18px;
+}
+.section1>span{
+    font-size: 22px;
+}
+.section1>span>a{
+    text-decoration: none;
+}
+.section1>span>a:hover{
+    color: black;
+}
+footer{
+    height: 40px;
+    text-align: center;
+    background-image: var(--header-gradient);
+}
+footer>p{
+    margin: 0px;
+}

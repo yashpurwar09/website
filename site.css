@@ -1,8 +1,10 @@
+
 /* ------------------------Gloabl Varaibles------------------------------- */
 :root{
     --header-gradient: linear-gradient(45deg, rgb(92, 139, 207), rgb(17, 17, 63));
     --section-gradient: linear-gradient(45deg,  rgb(17, 17, 63), rgb(92, 139, 207));
 }
+
 /* ------------------------Body---------------------------------------- */
 body{
     padding: 0px;
@@ -172,4 +174,9 @@ footer{
 }
 footer>p{
     margin: 0px;
+}
+@media screen and (max-width: 500px){
+    .main1, .main2, .main3, .main4, .main5{
+        height: 100%;
+    }
 }

@@ -4,7 +4,6 @@
     --header-gradient: linear-gradient(45deg, rgb(92, 139, 207), rgb(17, 17, 63));
     --section-gradient: linear-gradient(45deg,  rgb(17, 17, 63), rgb(92, 139, 207));
 }
-
 /* ------------------------Body---------------------------------------- */
 body{
     padding: 0px;
@@ -13,45 +12,38 @@ body{
 }
 /* --------------------Header---------------------------------- */
 header{
-    display: flex;
+    display: grid;
     height: 80px;
-    margin: px;
+    margin: 0px;
     position:sticky;
     top:0px;
+    align-content: center;
+    justify-items: center;
     background-image: var(--header-gradient);
-    justify-content: center;
     z-index: 1;
 }
 nav{
-    display: flex;
-    flex-direction: row;
     margin: 0px;
-    justify-content: center;
-    align-items: center;
     color: aqua;
 }
 nav>span{
-    width: 80px;
+    /* margin-right: 25px; */
     padding: 5px;
 }
 a{
     color: black;
 }
-/* ----------------------Main Body--------------------------------- */
-.main1, .main2, .main3, .main4, .main5{
-    height: 100vh;
-}
 .main1{
     background-color: whitesmoke;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-content: center;
 }
 .main1>div{
     background-image: var(--header-gradient);
-    width: 250px;
-    height: 300px;
+    width:250px;
+    height: 400px;
     border-radius: 30px;
     margin: 20px;
     box-shadow: -3px 3px 5px rgb(90, 84, 84), 3px -3px 5px rgb(56, 50, 50);
@@ -61,27 +53,27 @@ a{
     transform: scale(1.2);
 }
 .div1{
-    grid-column-start: 2;
-    flex-direction: row;
-    overflow: hidden;
-}
-.div1>div{
-    height: 150px;
+    grid-column-start: 1;
+    grid-column-end: 2;
     overflow: hidden;
 }
 .div2{
+    grid-column-start: 2;
+    grid-column-end: 3;
     overflow: hidden;
 }
-.div2>div{
-    height: 150px;
+.div3{
+    grid-column-start: 3;
+    grid-column-end: 4;
     overflow: hidden;
 }
-
-.card-section2{
-    margin:0px 0px 10px 0px;
+.div1>div .div2>div .div2>div{
+    height: 200px;
+    overflow: hidden;
 }
-.card-section2>h2{
-    margin: 2px 0px 4px 10px;
+img{
+    height: auto;
+    width: 100%;
 }
 .card-section2>section{
     margin: 0px 0px 20px 0px;
@@ -103,49 +95,52 @@ button{
     background-color: whitesmoke;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
+    justify-items: center;
+    align-content: center;
 }
 .main2>div{
-    width: 40vw;
-    height: 80vh;
     overflow: hidden;
     filter: drop-shadow(-5px 5px 5px rgb(89, 84, 84)) drop-shadow(5px -5px 5px rgb(74, 69, 69));
+}
+.main2>.main2-div1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.main2>.main2-div2{
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 .main3{
     background-color: whitesmoke;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
+    justify-items: center;
+    align-content: center;
 }
 .main3>div{
-    width: 40vw;
-    height: 80vh;
     overflow: hidden;
     filter: drop-shadow(-5px 5px 5px rgb(89, 84, 84)) drop-shadow(5px -5px 5px rgb(74, 69, 69));
 }
-.div3{
-    overflow: hidden;
+.main3>.main3-div1{
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
-.div3>div{
-    height: 150px;
-    overflow: hidden;
+.main3>.main3-div2{
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 .main4{
     background-image: var(--header-gradient);
+    padding: 20px;
 }
 .main4>div{
-    height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 20px;
-}
-.main4>blockquote{
-    margin: 10px;
-}
+} 
 h1{
-    padding: 70px;
+    padding: 10px;
+    margin: 0px;
 }
 .main4-section{
     display: flex;
@@ -175,8 +170,61 @@ footer{
 footer>p{
     margin: 0px;
 }
-@media screen and (max-width: 500px){
-    .main1, .main2, .main3, .main4, .main5{
-        height: 100%;
+@media screen and (max-width: 800px){
+    body{
+        margin: 20px 20px 0px 20px;
+    }
+    .main1{
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .div1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        overflow: hidden;
+    }
+    .div2{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        overflow: hidden;
+    }
+    .div3{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        overflow: hidden;
+    }
+    .main2>.main2-div1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .main2>.main2-div2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .main3>.main3-div1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .main3>.main3-div2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .main4>div{
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .section1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .section2{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .section3{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .main4-section{
+        row-gap: 10px;
     }
 }
+

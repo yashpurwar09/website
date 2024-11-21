@@ -7,5 +7,5 @@ icon.addEventListener('click',()=>{
     }
     else{
         nav.style.setProperty("display", "none");
-    }
+    };
 });

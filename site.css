@@ -216,21 +216,33 @@ footer>p{
         grid-column-end: 2;
         overflow: hidden;
     }
+    .main2{
+        grid-template-rows: 2;
+        grid-template-columns: auto;
+    }
     .main2>.main2-div1{
         grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column-end: 2;
     }
     .main2>.main2-div2{
         grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column-end: 2;
+    }
+    .main3{
+        grid-template-rows: 2;
+        grid-template-columns: auto;
     }
     .main3>.main3-div1{
+        grid-row-start: 2;
+        grid-row-end: 3;
         grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column-end: 2;
     }
     .main3>.main3-div2{
+        grid-row-start: 1;
+        grid-row-end: 2;
         grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column-end: 2;
     }
     .main4>div{
         grid-template-rows: repeat(3, 1fr);

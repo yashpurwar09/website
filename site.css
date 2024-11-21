@@ -13,14 +13,18 @@ body{
 /* --------------------Header---------------------------------- */
 header{
     display: grid;
-    height: 80px;
+    height: auto;
     margin: 0px;
+    padding: 40px;
     position:sticky;
     top:0px;
     align-content: center;
     justify-items: center;
     background-image: var(--header-gradient);
     z-index: 1;
+}
+.icon{
+    display: none;
 }
 nav{
     margin: 0px;
@@ -175,6 +179,22 @@ footer>p{
 @media screen and (max-width: 800px){
     body{
         margin: 20px 20px 0px 20px;
+    }
+    header{
+        padding: 10px;
+    }
+    .icon{
+        display: flex;
+        justify-self: start;
+    }
+    nav{
+        display: none;
+    }
+    nav>span{
+        display: flex;
+        flex-direction: row;
+        margin: 0px;
+        padding: 10px;
     }
     .main1{
         display: grid;

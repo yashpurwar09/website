@@ -7,5 +7,15 @@ icon.addEventListener('click',()=>{
     }
     else{
         nav.style.setProperty("display", "none");
-    };
+    }
+});
+window.addEventListener("resize",()=>{
+    const nav = document.querySelector("nav");
+    if(window.innerWidth>800){
+        nav.style.setProperty("display", "block");
+        nav.style.setProperty("justify-self","center");
+    }
+    else{
+        nav.style.setProperty("display","none");
+    }
 });

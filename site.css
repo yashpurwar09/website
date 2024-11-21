@@ -26,11 +26,6 @@ header{
 .icon{
     display: none;
 }
-nav{
-    margin: 0px;
-    color: aqua;
-    width:fit-content;
-}
 nav>span{
     padding: 30px;
 }
@@ -41,16 +36,18 @@ a{
 .main1{
     background-color: whitesmoke;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
     align-content: center;
+    margin-top: 50px;
 }
 .main1>div{
     background-image: var(--header-gradient);
-    width:250px;
-    height: 350px;
+    width:200px;
+    height: 300px;
     border-radius: 30px;
-    margin: 20px;
+    margin: 30px;
     box-shadow: -3px 3px 5px rgb(90, 84, 84), 3px -3px 5px rgb(56, 50, 50);
     transition: transform 1s;
 }
@@ -58,18 +55,18 @@ a{
     transform: scale(1.2);
 }
 .div1{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    overflow: hidden;
-}
-.div2{
     grid-column-start: 2;
     grid-column-end: 3;
     overflow: hidden;
 }
-.div3{
+.div2{
     grid-column-start: 3;
     grid-column-end: 4;
+    overflow: hidden;
+}
+.div3{
+    grid-column-start: 4;
+    grid-column-end: 5;
     overflow: hidden;
 }
 .div1>div .div2>div .div2>div{

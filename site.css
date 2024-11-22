@@ -74,7 +74,7 @@ a{
     overflow: hidden;
 }
 img{
-    height: auto;
+    height: 100%;
     width: 100%;
 }
 .card-section2>section{
@@ -105,8 +105,53 @@ button{
     filter: drop-shadow(-5px 5px 5px rgb(89, 84, 84)) drop-shadow(5px -5px 5px rgb(74, 69, 69));
 }
 .main2>.main2-div1{
+    display: grid;
+    grid-template-rows: 0.8fr 0.2fr;
     grid-column-start: 1;
     grid-column-end: 2;
+}
+.image-toggle{
+    display: grid;
+    aspect-ratio: 3/2;
+    position: relative;
+    justify-items: center;
+    align-content: center;
+    grid-template-rows: 1;
+    grid-template-columns: auto;
+    overflow: hidden;
+}
+.display{
+    display: none;
+}
+.image-toggle>.image1{
+    z-index: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.image-toggle>.image2{
+    z-index: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.image-toggle>.image3{
+    z-index: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.image-toggle-icon{
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    /* position: absolute; */
+}
+.image-toggle-icon>i{
+    margin-right: 3px;
 }
 .main2>.main2-div2{
     grid-column-start: 2;

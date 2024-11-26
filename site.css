@@ -15,7 +15,7 @@ header{
     display: grid;
     height: auto;
     margin: 0px;
-    padding: 40px;
+    padding: 20px;
     position:sticky;
     top:0px;
     align-content: center;
@@ -118,10 +118,10 @@ button{
     align-content: center;
     grid-template-rows: 1;
     grid-template-columns: 0.1fr 0.8fr 0.1fr;
-
     overflow: hidden;
 }
 .right-arrow-icon {
+    z-index: 4;
     align-self: center;
     grid-row-start: 1;
     grid-row-end: 2;
@@ -129,6 +129,7 @@ button{
     grid-column-end: 4;
 }
 .left-arrow-icon{
+    z-index: 5;
     align-self: center;
     grid-row-start: 1;
     grid-row-end: 2;
@@ -140,24 +141,27 @@ button{
 }
 .image-toggle>.image1{
     z-index: 3;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
+    transition: display 3s;
 }
 .image-toggle>.image2{
     z-index: 2;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
+    transition: display 3s;
 }
 .image-toggle>.image3{
     z-index: 1;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
+    transition: display 3s;
 }
 .image-toggle-icon{
     display: flex;
@@ -224,6 +228,7 @@ h1{
 .section1>span>a:hover{
     color: black;
 }
+/* -------------------Footer---------------------- */
 footer{
     height: 40px;
     text-align: center;
@@ -232,6 +237,7 @@ footer{
 footer>p{
     margin: 0px;
 }
+/* ------------------------------------Media Queiries------------------------ */
 @media screen and (max-width: 800px){
     body{
         margin: 20px 20px 0px 20px;
